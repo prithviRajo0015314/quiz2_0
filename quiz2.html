@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background:linear-gradient(90deg,#DA3068,#14469F);">
+    <style>
+        .container {
+
+            background: rgb(233, 226, 226);
+            position: absolute;
+            height: 460px;
+            width: 560px;
+            border-radius: 10px;
+            top: 80px;
+            left: 370px;
+            box-shadow: 10px 10px 20px 1px black;
+        }
+
+        @keyframes anihead {
+            from {
+                font-size: 40px;
+                color: blue;
+            }
+
+            to {
+                font-size: 25px;
+            }
+        }
+
+        .headd {
+            color: rgb(0, 0, 0);
+            position: absolute;
+            animation: anihead 1s;
+            animation-delay: 0.1s;
+            left: 20px;
+            font-size: 25px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .question {
+            position: relative;
+            width: 500px;
+            height: auto;
+            left: 30px;
+            top: 110px;
+            background: transparent;
+            color: black;
+            font-family: monospace;
+            font-size: 20px;
+            border-radius: 10px;
+            padding-left: 5px;
+            padding-right: 1px;
+            letter-spacing: -1px;
+            display: block;
+        }
+
+        .question2 {
+            position: relative;
+            width: 500px;
+            height: auto;
+            left: 30px;
+            top: 30px;
+            background: transparent;
+            color: black;
+            font-family: monospace;
+            font-size: 20px;
+            border-radius: 10px;
+            padding-left: 5px;
+            padding-right: 1px;
+            letter-spacing: -1px;
+            display: none;
+        }
+
+        .options {
+            background: #000;
+            position: absolute;
+            width: 500px;
+            height: auto;
+            left: 30px;
+            padding-bottom: 20px;
+            top: 225px;
+            border-radius: 10px;
+        }
+
+        .button {
+            position: relative;
+            width: 160px;
+            border-radius: 10px;
+            height: 40px;
+            font-size: 15px;
+            top: -5px;
+            border: none;
+            margin-top: 30px;
+            margin-left: 60px;
+        }
+
+        .dd {
+            color: rgb(87, 83, 77);
+            top: 170px;
+            position: absolute;
+            left: 30px;
+            font-size: medium;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .next {
+            color: white;
+            position: absolute;
+            width: 90px;
+            height: 30px;
+            border-radius: 20px;
+            background: #05dae9;
+            border: none;
+            font-size: 15px;
+            left: 450px;
+            box-shadow: 1px 1px 4px 0px black;
+            top: 25px;
+            display: block;
+        }
+
+        .next:hover {
+            color: black;
+
+        }
+
+        .options2 {
+            background: #000;
+            position: absolute;
+            width: 500px;
+            height: auto;
+            left: 30px;
+            padding-bottom: 20px;
+            top: 225px;
+            border-radius: 10px;
+        }
+
+        .button2 {
+            position: relative;
+            width: 160px;
+            border-radius: 10px;
+            height: 40px;
+            font-size: 15px;
+            top: -5px;
+            border: none;
+            margin-top: 30px;
+            margin-left: 60px;
+        }
+
+
+        .options3 {
+            background: #000;
+            position: absolute;
+            width: 500px;
+            height: auto;
+            left: 30px;
+            padding-bottom: 20px;
+            top: 225px;
+            border-radius: 10px;
+        }
+
+        .button3 {
+            position: relative;
+            width: 160px;
+            border-radius: 10px;
+            height: 40px;
+            font-size: 15px;
+            top: -5px;
+            border: none;
+            margin-top: 30px;
+            margin-left: 60px;
+        }
+
+        .options4 {
+            background: #000;
+            position: absolute;
+            width: 500px;
+            height: auto;
+            left: 30px;
+            padding-bottom: 20px;
+            top: 225px;
+            border-radius: 10px;
+        }
+
+        .button4 {
+            position: relative;
+            width: 160px;
+            border-radius: 10px;
+            height: 40px;
+            font-size: 15px;
+            top: -5px;
+            border: none;
+            margin-top: 30px;
+            margin-left: 60px;
+        }
+
+        .options5 {
+            background: #000;
+            position: absolute;
+            width: 500px;
+            height: auto;
+            left: 30px;
+            padding-bottom: 20px;
+            top: 225px;
+            border-radius: 10px;
+        }
+
+        .button5 {
+            position: relative;
+            width: 160px;
+            border-radius: 10px;
+            height: 40px;
+            font-size: 15px;
+            top: -5px;
+            border: none;
+            margin-top: 30px;
+            margin-left: 60px;
+        }
+
+        .options6 {
+            background: #000;
+            position: absolute;
+            width: 500px;
+            height: auto;
+            left: 30px;
+            padding-bottom: 20px;
+            top: 225px;
+            border-radius: 10px;
+        }
+
+        .button6 {
+            position: relative;
+            width: 160px;
+            border-radius: 10px;
+            height: 40px;
+            font-size: 15px;
+            top: -5px;
+            border: none;
+            margin-top: 30px;
+            margin-left: 60px;
+        }
+
+        .options7 {
+            background: #000;
+            position: absolute;
+            width: 500px;
+            height: auto;
+            left: 30px;
+            padding-bottom: 20px;
+            top: 225px;
+            border-radius: 10px;
+        }
+
+        .button7 {
+            position: relative;
+            width: 160px;
+            border-radius: 10px;
+            height: 40px;
+            font-size: 15px;
+            top: -5px;
+            border: none;
+            margin-top: 30px;
+            margin-left: 60px;
+        }
+
+        .options8 {
+            background: #000;
+            position: absolute;
+            width: 500px;
+            height: auto;
+            left: 30px;
+            padding-bottom: 20px;
+            top: 225px;
+            border-radius: 10px;
+        }
+
+        .button8 {
+            position: relative;
+            width: 160px;
+            border-radius: 10px;
+            height: 40px;
+            font-size: 15px;
+            top: -5px;
+            border: none;
+            margin-top: 30px;
+            margin-left: 60px;
+        }
+        
+        .options9 {
+            background: #000;
+            position: absolute;
+            width: 500px;
+            height: auto;
+            left: 30px;
+            padding-bottom: 20px;
+            top: 225px;
+            border-radius: 10px;
+        }
+
+        .button9 {
+            position: relative;
+            width: 160px;
+            border-radius: 10px;
+            height: 40px;
+            font-size: 15px;
+            top: -5px;
+            border: none;
+            margin-top: 30px;
+            margin-left: 60px;
+        }
+
+        .options10 {
+            background: #000;
+            position: absolute;
+            width: 500px;
+            height: auto;
+            left: 30px;
+            padding-bottom: 20px;
+            top: 225px;
+            border-radius: 10px;
+        }
+
+        .button10 {
+            position: relative;
+            width: 160px;
+            border-radius: 10px;
+            height: 40px;
+            font-size: 15px;
+            top: -5px;
+            border: none;
+            margin-top: 30px;
+            margin-left: 60px;
+        }
+        .see_score{
+            color: rgb(92, 133, 124);
+            position: absolute;
+            width: auto;
+            height: 30px;
+            border-radius: 0px;
+            background: #05dae9;
+            border: none;
+            font-size: 15px;
+            left: 425px;
+            box-shadow: 1px 1px 4px 0px black;
+            top: 25px;
+            padding: 8px;
+            display: none;
+
+        }
+        .see_score:hover {
+            color: black;
+
+        }
+    </style>
+    <div class="container">
+        <h2 class="headd">QUIZ TIME</h2><input type="button" class="next"   id="next_btn" onclick="next()" value="NEXT">  
+        <input type="button" class="see_score"   id="see_score" onclick="see_score()" value="SEE SCORE">
+        <div id="question" class="question">
+            (1) Which planet in our solar system is known as the "Red planet" ?
+        </div><br>
+        <h2 class="dd" id="dd">ANSWERS:</h2>
+
+        <div id="options" class="options">
+            <input type="button" class="button" id="a" value=" A) VENUS" onclick="wronga()">
+            <input type="button" class="button" id="b" value=" B) MARS" onclick="correct()"><br>
+            <input type="button" class="button" id="c" value="C) JUPITER" onclick="wrongc(this)">
+            <input type="button" class="button" id="d" value="D) SATURN" onclick="wrongd()">
+
+        </div>
+        <div id="options2" class="options2">
+            <input type="button" class="button2" id="a2" value="a)BEIJING" onclick="wronga2()">
+            <input type="button" class="button2" id="b2" value=" b)SEOUL" onclick="wrongb2()"><br>
+            <input type="button" class="button2" id="c2" value="c)TOKYO" onclick="correct2()">
+            <input type="button" class="button2" id="d2" value="d)BANGKOK" onclick="wrongd2()">
+
+        </div>
+
+        <div id="options3" class="options3">
+            <input type="button" class="button3" id="a3" value="a)ATOM" onclick="wronga3()">
+            <input type="button" class="button3" id="b3" value=" b)ORGAN" onclick="wrongb3()"><br>
+            <input type="button" class="button3" id="c3" value="c)TISSUE" onclick="wrongc3()">
+            <input type="button" class="button3" id="d3" value="d)CELL" onclick="correct3()">
+
+        </div>
+        <div id="options4" class="options4">
+            <input type="button" class="button4" id="a4" value="a)THOMAS EDISION" onclick="correct4()">
+            <input type="button" class="button4" id="b4" value=" b)NEWTON" onclick="wrongb4()"><br>
+            <input type="button" class="button4" id="c4" value="c)TESLA" onclick="wrongc4()">
+            <input type="button" class="button4" id="d4" value="d)ALEXANDER" onclick="wrongd4()">
+
+        </div>
+
+        <div id="options5" class="options5">
+            <input type="button" class="button5" id="a5" value="a)VITAMIN A" onclick="wronga5()">
+            <input type="button" class="button5" id="b5" value=" b)VITAMIN B" onclick="wrongb5()"><br>
+            <input type="button" class="button5" id="c5" value="c)VITAMIN C" onclick="wrongc5()">
+            <input type="button" class="button5" id="d5" value="d)VITAMIN D" onclick="correct5()">
+        </div>
+
+        <div id="options6" class="options6">
+            <input type="button" class="button5" id="a6" value="a)AMAZON" onclick="wronga6()">
+            <input type="button" class="button5" id="b6" value=" b) NILE" onclick="correct6()"><br>
+            <input type="button" class="button5" id="c6" value="c)YANGZE" onclick="wrongc6()">
+            <input type="button" class="button5" id="d6" value="d)MISSISSIPPI" onclick="wrongd6()">
+        </div>
+
+        <div id="options7" class="options7">
+            <input type="button" class="button7" id="a7" value="a)OXYGEN" onclick="correct7()">
+            <input type="button" class="button7" id="b7" value=" b) OSIMIUM" onclick="wrongb7()"><br>
+            <input type="button" class="button7" id="c7" value="c)OPIUM" onclick="wrongc7()">
+            <input type="button" class="button7" id="d7" value="d)OGANESSON" onclick="wrongd7()">
+        </div>
+
+        <div id="options8" class="options8">
+            <input type="button" class="button8" id="a8" value="a)1945" onclick="wronga8()">
+            <input type="button" class="button8" id="b8" value=" b) 1950" onclick="wrongb8()"><br>
+            <input type="button" class="button8" id="c8" value="c)1980" onclick="wrongc8()">
+            <input type="button" class="button8" id="d8" value="d)1947" onclick="correct8()">
+        </div>
+
+        <div id="options9" class="options9">
+            <input type="button" class="button9" id="a9" value="a)GOLD" onclick="wronga9()">
+            <input type="button" class="button9" id="b9" value=" b) DIAMOND" onclick="correct9()"><br>
+            <input type="button" class="button9" id="c9" value="c)IRON" onclick="wrongc9()">
+            <input type="button" class="button9" id="d9" value="d)SLIVER" onclick="wrongd9()">
+        </div>
+
+
+
+        <div id="options10" class="options10">
+            <input type="button" class="button10" id="a10" value="a)JAPAN" onclick="correct10()">
+            <input type="button" class="button10" id="b10" value=" b) CHINA" onclick="wrongb10()"><br>
+            <input type="button" class="button10" id="c10" value="c)KOREA" onclick="wrongc10()">
+            <input type="button" class="button10" id="d10" value="d)THAILAND" onclick="wrongd10()">
+        </div>
+
+       
+
+<div  id="scorearea" class="scorearea">
+
+<h2 class="vb">YOUR TOTAL SCORE</h2>
+<div  id="scorebox" class="scorebox">
+freger
+</div><br>
+<h1 class="vb_" >OUT OF 10!</h1>
+
+
+</div>
+    </div>
+
+
+    <style>
+        .scorearea{
+  background:linear-gradient(270deg,#DA3068,#14469F);position: absolute;
+width: 500px;
+height: 300px;
+top: 100px;
+border-radius: 10px;
+left: 30px;
+display: none;
+
+        }
+        .vb_{
+            color:black;
+            position: absolute;
+            left: 165px;
+            font-size: 30px;
+            top: 150px;
+            font-family: monospace; 
+        }
+        .scorebox{
+            background: transparent;
+            position: absolute;
+            width: 200px;
+            height: 50px;
+            color:rgb(0, 0, 0);
+            top: 100px;
+            left: 145px;
+            font-size:35px;
+            text-align: center;
+            padding-top: 10px;
+        }
+        .vb{
+            color:black;
+            position: absolute;
+            left: 110px;
+            font-size: 30px;
+            font-family: monospace;
+
+        }
+        .options {
+            display: block;
+        }
+
+        .options2 {
+            display: none;
+        }
+
+        .options3 {
+            display: none;
+        }
+
+        .options4 {
+            display: none;
+        }
+
+        .options5 {
+            display: none;
+        }
+
+        .options6 {
+            display: none;
+        }
+
+        .options7 {
+            display: none;
+        }
+
+        .options8 {
+            display: none;
+        }
+        .options9 {
+            display: none;
+        }
+        .options10 {
+            display: none;
+        }
+    </style>
+
+
+    <script src="quiz2.js"></script>
+</body>
+
+</html>
